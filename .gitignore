@@ -1,0 +1,5 @@
+.env
+.venv/
+ta-lib/
+strategies/
+/ta-lib-0.4.0-src.tar.gz

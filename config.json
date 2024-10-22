@@ -1,0 +1,74 @@
+{
+  "timeframe": "1m",
+  "trade_params": {
+    "leverage": 20,
+    "stake_ammount": 10
+  },
+  "max_open_trade": 1,
+  "dry_run": true,
+  "dry_run_wallet": 100,
+  "exchange": {
+    "test_key": "YOUR_TESTNET_KEY_FROM_BINANCE",
+    "test_secret": "YOUR_TESTNET_SECRET_BINANCE",
+    "real_key": "YOUR_REAL_KEY_FROM_BINANCE",
+    "real_secret": "YOUR_REAL_SECRET_BINANCE",
+    "pair_whitelist": ["BTC/USDT:USDT"],
+    "type": "future",
+    "ohlcv_candle_limit": 2000
+  },
+  "telegram": {
+    "enabled": false,
+    "token": "TELEGRAM_BOT_TOKEN",
+    "user_id": "TELEGRAM_USER_ID",
+    "chat_id": "TELEGRAM_CHAT_ID"
+  },
+  "process_throttle_secs": 0.1,
+  "training_params": {
+    "filter_method": [],
+    "filter_params": {
+      "regime": {
+        "threshold": -0.1
+      },
+      "trend": {
+        "periods": [0, 5, 10]
+      },
+      "stc": {
+        "length": 12,
+        "fast": 26,
+        "slow": 50
+      },
+      "ut": {
+        "sensitivity": 1,
+        "atr_period": 10
+      }
+    },
+    "neighbor_count": 8,
+    "feature_count": 5,
+    "future_count": 1,
+    "f1": {
+      "name": "rsi",
+      "paramsA": 3,
+      "paramsB": 2
+    },
+    "f2": {
+      "name": "wt",
+      "paramsA": 3,
+      "paramsB": 2
+    },
+    "f3": {
+      "name": "cci",
+      "paramsA": 3,
+      "paramsB": 2
+    },
+    "f4": {
+      "name": "adx",
+      "paramsA": 3,
+      "paramsB": 2
+    },
+    "f5": {
+      "name": "rsi",
+      "paramsA": 2,
+      "paramsB": 2
+    }
+  }
+}
